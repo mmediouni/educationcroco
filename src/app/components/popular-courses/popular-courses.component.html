@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 250px">
+  <div *ngFor="let c of courses">
+      {{c.name}}
+      {{c.price}}
+      {{c.trainer}}
+
+
+      <app-course [courseInput]='c' ></app-course>
+
+  </div>
+</div>

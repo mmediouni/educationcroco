@@ -1,0 +1,31 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Trainer</th>
+        <th scope="col">Capacity</th>
+        <!-- <th scope="col">Date</th> -->
+        <th scope="col">Price</th>
+        <!-- <th scope="col">Description</th> -->
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+<tbody>
+    <tr *ngFor='let c of coursesData'>
+        <td>{{c._id}}</td>
+        <td>{{c.name}}</td>
+    <td>{{c.trainer}}</td>
+    <td>{{c.capacity}}</td>
+    
+    <!-- <td>{{c.date | date:'dd/MM/yyyy'}}</td> -->
+    <td>{{c.price}}</td>
+    <!-- <td>{{c.description}}</td> -->
+    <td>
+        <button type="button" (click)="goToDisplayCourse(c._id)" class="btn btn-success">Display</button>
+        <button type="button" (click)="goToEditCourse(c._id)"class="btn btn-warning">Edit</button>
+        <button type="button" (click)="deleteCourse(c._id)"class="btn btn-danger">Delete</button>
+    </td>
+    </tr>
+</tbody>
+</table>

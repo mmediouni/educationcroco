@@ -1,0 +1,20 @@
+<!-- Contact Form -->
+
+ <!-- Contact Form -->
+ <div class="col-lg-8 " style="margin-top: 200px; margin-bottom: 200px;">
+    <div class="contact_form justify-content-center">
+        <div class="contact_info_title">Weather</div>
+        <form action="#" class="comment_form" #weatherForm='ngForm' (ngSubmit)='search()'>
+            
+            <div>
+                <div class="form_title">City</div>
+                <input type="text" class="comment_input" [(ngModel)]='weather.city' [ngModelOptions]="{standalone: true}" required="required">
+            </div>
+            
+            
+            <div>
+                <button type="submit" class="comment_button trans_200">Search</button>
+            </div>
+        </form>
+    </div>
+</div>

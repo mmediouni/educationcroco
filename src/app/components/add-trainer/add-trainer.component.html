@@ -1,0 +1,45 @@
+<!-- Contact Form -->
+<div class="col-lg-8 " style="margin-top: 200px; margin-bottom: 200px;">
+    <div class="contact_form justify-content-center">
+        <div class="contact_info_title">Add Trainer</div>
+        <form action="#" class="comment_form" [formGroup]='addTrainerForm'>
+
+            <div>
+                <div class="form_title">First Name</div>
+                <input type="text" class="comment_input" formControlName="firstName" required="required">
+            </div>
+            
+            <div>
+                <div class="form_title">Last Name</div>
+                <input type="text" class="comment_input" formControlName="lastName" required="required">
+            </div>
+           
+            <div>
+                <div class="form_title">Email</div>
+                <input type="text" class="comment_input" formControlName="email" required="required">
+            </div>
+           
+            <div>
+                <div class="form_title">Speciality</div>
+                <input type="text" class="comment_input" formControlName="speciality" required="required">
+            </div>
+           
+
+            <div>
+                <div class="form_title">Experience</div>
+                <input type="text" class="form-control" formControlName='experience' placeholder="experience">
+            </div>
+            <div>
+                <button class="btn btn-danger" (click)='filePicker.click()'>Select Trainer Avatar</button>
+            </div>
+            <div style="visibility: hidden;">
+                <div class="form_title">Avatar</div>
+                <input type="file" class="form-control" r (change)='onImageSelected($event)'  #filePicker placeholder="experience">
+            </div>
+            <img [src]="imagePreview" *ngIf='imagePreview' width="200px" height="200px">
+            <div>
+                <button type="submit" class="comment_button trans_200" (click)="addTrainer()">Add Trainer</button>
+            </div>
+        </form>
+    </div>
+</div>
